@@ -1,0 +1,31 @@
+<head>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+  </style>
+  <header>
+    response
+  </header>
+  <title>response</title>
+</head>
+<body>
+  <table class="table">
+      <thead>
+          <tr>
+              {% for h in header %}
+              <th>{{h}}</th>
+              {% endfor %}
+          </tr>
+      </thead>
+      <tbody>
+          {% for r in rows %}
+              <tr>
+                  <td>{{r.customer}}</td>
+                  <td>{{r.total_spent}}</td>
+                  <td>{{r.items}}</td>
+              </tr>
+          {% endfor %}
+      </tbody>
+  </table>
+</body>
